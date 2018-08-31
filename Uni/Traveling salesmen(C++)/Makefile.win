@@ -1,0 +1,50 @@
+# Project: TCP_project
+# Makefile created by Dev-C++ 5.4.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = random.o point.o vertex.o edge.o edgecomparer.o graph.o disjointset.o TSPNoTemplate.o
+LINKOBJ  = random.o point.o vertex.o edge.o edgecomparer.o graph.o disjointset.o TSPNoTemplate.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = TCP_project.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+random.o: random.cpp
+	$(CPP) -c random.cpp -o random.o $(CXXFLAGS)
+
+point.o: point.cpp
+	$(CPP) -c point.cpp -o point.o $(CXXFLAGS)
+
+vertex.o: vertex.cpp
+	$(CPP) -c vertex.cpp -o vertex.o $(CXXFLAGS)
+
+edge.o: edge.cpp
+	$(CPP) -c edge.cpp -o edge.o $(CXXFLAGS)
+
+edgecomparer.o: edgecomparer.cpp
+	$(CPP) -c edgecomparer.cpp -o edgecomparer.o $(CXXFLAGS)
+
+graph.o: graph.cpp
+	$(CPP) -c graph.cpp -o graph.o $(CXXFLAGS)
+
+disjointset.o: disjointset.cpp
+	$(CPP) -c disjointset.cpp -o disjointset.o $(CXXFLAGS)
+
+TSPNoTemplate.o: TSPNoTemplate.cpp
+	$(CPP) -c TSPNoTemplate.cpp -o TSPNoTemplate.o $(CXXFLAGS)
