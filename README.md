@@ -1,0 +1,1 @@
+This is code from various points in time of my programming journey starting with university projects through to personal projects and gamejams. Mostly uncurated and put here to reflect on my own progress
