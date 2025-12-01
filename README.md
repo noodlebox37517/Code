@@ -1,1 +1,1 @@
-This is code from various points in time of my programming journey starting with university projects through to personal projects and gamejams. Mostly uncurated and put here to reflect on my own progress
+A collection of code spanning different stages of my programming career—from university projects to personal work and game jams. It’s mostly uncurated and exists here as a record of my progress over time.
